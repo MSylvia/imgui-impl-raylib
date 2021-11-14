@@ -248,8 +248,8 @@ bool ImGui_ImplRaylib_ProcessEvent()
     //if (GetKeyPressed() != -1)
     //{
 #ifdef ENABLE_SCODETOUTF8
-    int length;     //  Length was only ever created to be passed to CodepointToUtf8(), since it doesn't check for nullptrs.
-    io.AddInputCharactersUTF8(CodepointToUtf8(GetCharPressed(), &length));
+    int length;     //  Length was only ever created to be passed to CodepointToUTF8(), since it doesn't check for nullptrs.
+    io.AddInputCharactersUTF8(CodepointToUTF8(GetCharPressed(), &length));
     (void)length;   //  Silencing the compiler warnings.
 #else
     io.AddInputCharacter(GetKeyPressed());
